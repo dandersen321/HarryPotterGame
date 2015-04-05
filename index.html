@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="tetris-app">
+<head>
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/Triforce.ico" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="scripts/modernizr.js"></script>
+    <script type="text/javascript" src="scripts/loader.js"></script>
+</head>
+<body>
+    <div id="masterGameWrapper">
+        <div id="gameMenuScreen" style="display: none;">
+            <ul id="gameMenu"></ul>
+        </div>
+        <div id="gameQuestionScreen" style="display: none;">
+            <div id="gameOptionsWrapper">
+                <ul id="gameQuestionOptions">
+                    <li>Pause</li>
+                    <li onclick="BookGame.Core.repeatQuestion()">Repeat</li>
+                </ul>
+                <table id="playerTable"></table>
+            </div>
+            
+        </div>
+        <div id="gameAnswerScreen" style="display: none;">
+            <ul id="listOfChoices"></ul>
+        </div>
+        <!--<div id="gamePlayingScreen" style="display: none;">
+            <ul id="listOfBooks">
+            </ul>
+        </div>-->
+        <div id="highScoresScreen" style="display: none;" ng-controller="high-scores">
+            <!--<h3>HighScores</h3>-->
+            <h3 style="text-align: center;">High Scores</h3>
+            <ul id="highScoresList" ng-repeat="highscore in highscores">
+                <li>Harry Potter: 10</li>
+            </ul>
+
+        </div>
+        <div id="controlsScreen" style="display: none;">
+            <h3 style="text-align: center;">Controls</h3>
+            <ul id="controlsList"></ul>
+        </div>
+        <div id="creditsScreen" style="display: none;">
+            <img src="images/spock.jpg" /><br />
+            <span>This Game Created By Dylan Andersen</span><br />
+            <span>Live Long and Prosper</span>
+        </div>
+    </div>
+
+    <div style="display: none;">
+    </div>
+
+</body>
+</html>
